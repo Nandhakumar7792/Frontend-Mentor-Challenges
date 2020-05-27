@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* Variables */
+:root {
+    --red-color: hsl(0, 78%, 62%);
+    --cyan-color: hsl(180, 62%, 55%);
+    --orange-color: hsl(34, 97%, 64%);
+    --blue-color: hsl(212, 86%, 64%);
+
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--very-light-gray);
+}
+
+header {
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 200;
+    margin: 0;
+}
+
+span.strong {
+    font-weight: 600;
+}
+
+p {
+    color: var(--grayish-blue);
+}
+
+.container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   max-width: 1140px;
+   margin: 0 auto;
+}
+
+.box {
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05),
+        0 6px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 30px;
+    margin: 15px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box::after {
+    content: '';
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.box-cyan::after {
+    background-color: var(--cyan-color);
+}
+
+.box-red::after {
+    background-color: var(--red-color);
+}
+
+.box-orange::after {
+    background-color: var(--orange-color);
+}
+
+.box-blue::after {
+    background-color: var(--blue-color);
+}
+
+.box-push {
+    transform: translateY(50%);
+}
+
+.box h2 {
+    margin: 0;
+}
+
+.box p {
+    font-size: 14px;
+    margin: 15px 0 40px;
+}
+
+.box img {
+    display: block;
+    margin-left: auto;
+}
+
+
+
+footer {
+    text-align: center;
+}
+
+@media(max-width: 775px) {
+    .box-push {
+        transform: translateY(0);
+    }
+}
